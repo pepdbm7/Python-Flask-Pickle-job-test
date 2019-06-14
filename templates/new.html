@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block body %}
+<div
+  style="display: flex;
+flex-direction: column;
+align-items: center; 
+height: 98vh;
+background: #d8d8d8d8"
+>
+  <h1 style="font-size: 40px;">
+    Add a new email
+  </h1>
+  <form
+    style="display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20%;"
+    method="POST"
+    action="{{ url_for('addNew') }}"
+  >
+    <div>
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="Email" />
+      <button type="submit">Add</button>
+    </div>
+  </form>
+  <br />
+  <button type="button">
+    <a href="{{ url_for('showAll') }}">See all emails</a>
+  </button>
+</div>
+{% endblock %}

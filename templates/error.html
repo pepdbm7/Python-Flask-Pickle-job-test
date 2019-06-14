@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block body %}
+<div
+  style="display: flex;
+flex-direction: column;
+align-items: center; 
+height: 98vh;
+background: #d8d8d8d8"
+>
+  <h1 style="color: red; font-size: 40px;">
+    Invalid email, it already exists!!
+  </h1>
+  <br />
+  <div
+    style="display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;"
+  >
+    <button>
+      <a style="color: gray" href="{{ url_for('showAll') }}">See all emails</a>
+    </button>
+    <button>
+      <a style="color: green" href="{{ url_for('addNew') }}"
+        >Try with another email</a
+      >
+    </button>
+  </div>
+</div>
+{% endblock %}
